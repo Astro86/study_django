@@ -4,3 +4,7 @@
 - [blog 앱 만들기, Post 모델 만들기, admin에 추가하기](log/make_blog.md)
 - [django 지역(시간) 세팅 수정하기, Post 개선하기 str](log/django_time_setting.md)
 - [MTV 구조 맛보기 : model, views, templates 사용하기](log/model_views_templates.md)
+- [FBV -> MBV : 블로그 포스트 리스트](log/from_FBV_to_MBV_make_blog_post_list.md)
+- [static 파일 관리하기 : bootstrap 적용을 위해](log/manage_static_file_to_adapt_bootstrap.md)
+- [navigation bar 만들기](log/navigation_bar.md)
+- [Bootstrap Grid](log/bootstrap_grid.md)
