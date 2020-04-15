@@ -8,8 +8,8 @@
 - [static 파일 관리하기 : bootstrap 적용을 위해](log/manage_static_file_to_adapt_bootstrap.md)
 - [navigation bar 만들기](log/navigation_bar.md)
 - [Bootstrap Grid](log/bootstrap_grid.md)
-- [CSS 수정하기]
-- [사진 업로드를 위한 ImageField와 업로드된 파일 관리 방법]
+- [CSS 수정하기](log/revise_css.md)
+- [사진 업로드를 위한 ImageField와 업로드된 파일 관리 방법](log/ImageField_to_upload_iamge.md)
 - [template(html)에서 if문 사용하기]
 - [템플릿에서 truncate로 앞 내용만 보여주기]
 - [Post Detail 페이지 만들기]
