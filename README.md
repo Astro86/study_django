@@ -17,8 +17,7 @@
 ## TDD
 
 - TDD(Test Driven Development 소개)
-- [Post List 페이지 테스트 코드 작성하기 part A](log/page_test_code_partA.md)
-- Post List 페이지 테스트 코드 작성하기 part B
+- [Post List 페이지 테스트 코드 작성하기](log/page_test_code_partA.md)
 - [Post Detail 페이지 테스트 코드 작성하기]
 
 ## HTML 모듈별로 관리하기
