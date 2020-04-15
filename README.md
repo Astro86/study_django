@@ -8,3 +8,20 @@
 - [static 파일 관리하기 : bootstrap 적용을 위해](log/manage_static_file_to_adapt_bootstrap.md)
 - [navigation bar 만들기](log/navigation_bar.md)
 - [Bootstrap Grid](log/bootstrap_grid.md)
+- [CSS 수정하기]
+- [사진 업로드를 위한 ImageField와 업로드된 파일 관리 방법]
+- [template(html)에서 if문 사용하기]
+- [템플릿에서 truncate로 앞 내용만 보여주기]
+- [Post Detail 페이지 만들기]
+
+## TDD
+
+- [TDD(Test Driven Development 소개)]
+- [Post List 페이지 테스트 코드 작성하기 part A]
+- [Post List 페이지 테스트 코드 작성하기 part B]
+- [Post Detail 페이지 테스트 코드 작성하기]
+
+## HTML 모듈별로 관리하기
+
+- [HTML 분리해서 관리하기]
+- [read more 버튼 동작하게 하기, post_detail 페이지 개선하기]
