@@ -10,7 +10,7 @@
 - [Bootstrap Grid](log/bootstrap_grid.md)
 - [CSS 수정하기](log/revise_css.md)
 - [사진 업로드를 위한 ImageField와 업로드된 파일 관리 방법](log/ImageField_to_upload_iamge.md)
-- [template(html)에서 if문 사용하기]
+- [template(html)에서 if문 사용하기](log/use_if_in_template.md)
 - [템플릿에서 truncate로 앞 내용만 보여주기]
 - [Post Detail 페이지 만들기]
 
