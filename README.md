@@ -22,5 +22,5 @@
 
 ## HTML 모듈별로 관리하기
 
-- [HTML 분리해서 관리하기]
+- [HTML 분리해서 관리하기](log/divide_html.md)
 - [read more 버튼 동작하게 하기, post_detail 페이지 개선하기]
