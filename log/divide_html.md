@@ -102,7 +102,8 @@ Destroying test database for alias 'default'...
 
 ```django
 {% extends 'blog/base.html' %}
-{% block title %}{{object.title}}{% endblock %}
+<!-- 포스트의 title을 반영한다. -->
+{% block title %}{{ object.title }}{% endblock %}
 {% block content %}
 <h1>{{object.title}}</h1>
 <div>
