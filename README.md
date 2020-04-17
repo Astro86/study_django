@@ -59,7 +59,7 @@
 ## Post Detail 페이지 개선하기
 
 - [Post Detail 개선사항 도출하고 Test 코드 만들기](log/revise_post_detail_and_make_test_code.md)
-- 마크다운적용하기, tag field에 공란 허용하기
+- [마크다운적용하기, tag field에 공란 허용하기](log/adopt_markdown_and_arrow_tag_field_blank.md)
 - Post 수정 화면 / 기능 구현하기
 - Post 작성 화면 / 기능 구현하기
 - 로그인 사용자만 접속 가능하게 하기 (LoginRequiredMixin)
