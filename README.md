@@ -4,14 +4,27 @@
 - [blog 앱 만들기, Post 모델 만들기, admin에 추가하기](log/make_blog.md)
 - [django 지역(시간) 세팅 수정하기, Post 개선하기 str](log/django_time_setting.md)
 - [MTV 구조 맛보기 : model, views, templates 사용하기](log/model_views_templates.md)
+
+## ListView 사용하기
+
 - [FBV -> MBV : 블로그 포스트 리스트](log/from_FBV_to_MBV_make_blog_post_list.md)
+
+## Bootstrap 적용
+
 - [static 파일 관리하기 : bootstrap 적용을 위해](log/manage_static_file_to_adapt_bootstrap.md)
 - [navigation bar 만들기](log/navigation_bar.md)
 - [Bootstrap Grid](log/bootstrap_grid.md)
+
+## static files & Media files
 - [CSS 수정하기](log/revise_css.md)
 - [사진 업로드를 위한 ImageField와 업로드된 파일 관리 방법](log/ImageField_to_upload_iamge.md)
+
+## 화면 구성 개선하기
 - [template(html)에서 if문 사용하기](log/use_if_in_template.md)
 - [템플릿에서 truncate로 앞 내용만 보여주기](log/use_truncate.md)
+
+## DetailView 사용하기
+
 - [Post Detail 페이지 만들기](log/make_post_detail.md)
 
 ## TDD
@@ -32,7 +45,7 @@
 ## Relation - ForiegnKey
 
 - [블로그 post에 카테고리 추가하기](log/add_category.md)
-- 블로그 post list와 post detail 페이지에 카테고리 추가하기
+- [블로그 post list와 post detail 페이지에 카테고리 추가하기](log/add_category_to_post_list_to_post_detail.md)
 - 사소한 문제들 해결: 불필요한 내용 삭제하기; category 복수형 수정하기 (categorys -> categories)
 - Category 페이지 만들기 (slugField)
 
