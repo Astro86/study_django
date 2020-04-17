@@ -46,8 +46,8 @@
 
 - [블로그 post에 카테고리 추가하기](log/add_category.md)
 - [블로그 post list와 post detail 페이지에 카테고리 추가하기](log/add_category_to_post_list_to_post_detail.md)
-- 사소한 문제들 해결: 불필요한 내용 삭제하기; category 복수형 수정하기 (categorys -> categories)
-- Category 페이지 만들기 (slugField)
+- [사소한 문제들 해결: 불필요한 내용 삭제하기; category 복수형 수정하기 (categorys -> categories)](log/revise_category.md)
+- [Category 페이지 만들기 (slugField)](log/category_page.md)
 
 
 ## Relation - ManyToManyField
