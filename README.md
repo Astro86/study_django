@@ -62,7 +62,7 @@
 - [마크다운적용하기, tag field에 공란 허용하기](log/adopt_markdown_and_arrow_tag_field_blank.md)
 - [Post 수정 화면 / 기능 구현하기](log/revise_post.md)
 - [Post 작성 화면 / 기능 구현하기](log/write_post_implement_function.md)
-- 로그인 사용자만 접속 가능하게 하기 (LoginRequiredMixin)
+- [로그인 사용자만 접속 가능하게 하기 (LoginRequiredMixin)](log/access_who_login.md)
 
 
 ## Comment(댓글) 구현하기
