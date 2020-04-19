@@ -67,8 +67,8 @@
 
 ## Comment(댓글) 구현하기
 
-- Comment (댓글) 모델 구현하기
-- Comment (댓글) view 구현하기
+- [Comment (댓글) 모델 구현하기](log/implement_comment_model.md)
+- [Comment (댓글) view 구현하기](log/implement_comment_view.md)
 - Comment (댓글) 작성창 구현하기
 - Comment 작성일 추가하기, edit, delete 버튼 만들기
 
