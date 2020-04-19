@@ -21,6 +21,10 @@ class CommentForm(forms.ModelForm):
 > blog/tests.py
 
 ```python
+# 로그인하기
+login_success = self.client.login(username='smith', password='nopassword')
+self.assertTrue(login_success)
+
 # post를 이용하여 서버에 데이터를 보낸다.
 response = self.client.post(
     post_000.get_absolute_url() + 'new_comment/',
