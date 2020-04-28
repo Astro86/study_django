@@ -94,7 +94,7 @@ class Post(models.Model):
 python manage.py createsuperuser
 ```
 
-<image src="../image/admin.png" width = 350>
+<image src="../image/admin.png" width = 450>
 
 ## admin 페이지에 blog의 Post를 반영하기
 
@@ -109,4 +109,4 @@ from .models import Post
 admin.site.register(Post)
 ```
 
-<image src="../image/admin_post.png" width = 350>
+<image src="../image/admin_post.png" width = 450>
