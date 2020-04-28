@@ -79,20 +79,22 @@ class Post(models.Model):
 
 ## ForeignKey에 대한 on_delete 옵션
 
-| 옵션               | 설명                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------ |
-| models.CASCADE     | ForeignKeyField가 바라보는 값이 삭제될 때 관련된 모든 row를 삭제한다.                            |
-| models.PROTECT     | ForeignKeyField가 바라보는 값이 삭제될 때 삭제가 되지 않도록 ProtectedError를 발생시킨다.        |
-| models.SET_NULL    | ForeignKeyField가 바라보는 값이 삭제될 때 ForeignKeyField값을 NULL로 한다.                       |
-| models.SET_DEFAULT | ForeignKeyField가 바라보는 값이 삭제될 때 ForeignKeyField를 default로 바꾼다.                    |
+| 옵션                 | 설명                                                                     |
+| ------------------ | ---------------------------------------------------------------------- |
+| models.CASCADE     | ForeignKeyField가 바라보는 값이 삭제될 때 관련된 모든 row를 삭제한다.                       |
+| models.PROTECT     | ForeignKeyField가 바라보는 값이 삭제될 때 삭제가 되지 않도록 ProtectedError를 발생시킨다.       |
+| models.SET_NULL    | ForeignKeyField가 바라보는 값이 삭제될 때 ForeignKeyField값을 NULL로 한다.             |
+| models.SET_DEFAULT | ForeignKeyField가 바라보는 값이 삭제될 때 ForeignKeyField를 default로 바꾼다.          |
 | models.set()       | ForeignKeyField가 바라보는 값이 삭제될 때 ForeignKeyField값을 SET에 의해 설정된 값으로 설정한다. |
-| models.DO_NOTHING  | ForeignKeyField가 바라보는 값이 삭제될 때 아무런 행동을 취하지 않는다.                           |
+| models.DO_NOTHING  | ForeignKeyField가 바라보는 값이 삭제될 때 아무런 행동을 취하지 않는다.                        |
 
 ## admin 계정 만들기
 
 ```python
 python manage.py createsuperuser
 ```
+
+<image src="../image/admin.png" width = 350>
 
 ## admin 페이지에 blog의 Post를 반영하기
 
@@ -106,3 +108,5 @@ from .models import Post
 
 admin.site.register(Post)
 ```
+
+<image src="../image/admin_post.png" width = 350>
