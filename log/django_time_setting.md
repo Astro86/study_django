@@ -12,6 +12,8 @@ TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Seoul'
 ```
 
+<image src="../image/post_object.png" width = 450>
+
 ## str 추가하기
 
 > blog/model.py
@@ -38,3 +40,5 @@ class Post(models.Model):
         # 작성된 페이지의 제목과 저자를 보여준다.
         return '{} :: {}'.format(self.title, self.author)
 ```
+
+<image src="../image/post_name.png" width = 450>
