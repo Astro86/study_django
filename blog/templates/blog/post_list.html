@@ -1,0 +1,60 @@
+{% extends 'blog/base.html' %}
+<!-- title이 있는 경우에 -->
+{#{% if title %}#}
+{#    {% block title %}{{ title }}{% endblock %}#}
+{#{% endif %}#}
+
+{% block content %}
+<!--로그인 한 사용자에게만 보이게 하기-->
+{% if user.is_authenticated %}
+<!-- new post button 만들기 -->
+<button class="btn btn-primary btn-sm float-right" onclick="location.href='/blog/create/'">New Post</button>
+{% endif %}
+<h1>Blog {% if category  %} <small class="text-muted">: {{ category }}</small>{% endif %}</h1>
+<!-- Blog Post -->
+{% if object_list.exists %}
+<!-- 포스트의 모든 게시물들을 하나씩 가져온다. -->
+{% for p in object_list %}
+<div class="card mb-4">
+    <!-- <img
+    class="card-img-top"
+    src="http://placehold.it/750x300"
+    alt="Card image cap"
+    /> -->
+
+    {% if p.head_image %}
+    <img class="card-img-top" src="{{ p.head_image.url }}" alt="Card image cap" />
+    {% else %}
+    <img class="card-img-top" src="https://picsum.photos/seed/picsum/750/300" alt="Card image cap" />
+    {% endif %}
+
+    <div class="card-body">
+        <!-- badge를 붙인다. -->
+        <!-- 카테고리가 있는 경우에는 카테고리를 보여주고, 없는 경우에는 미분류를 보여준다. -->
+        {% if p.category %}
+        <!-- badge가 오른쪽에 붙을 수 있게 float-right옵션을 이용한다. -->
+        <span class="badge badge-primary float-right">{{ p.category }}</span>
+        {% else %}
+        <span class="badge badge-primary float-right">미분류</span>
+        {% endif %}
+        <!-- 제목 -->
+        <h2 class="card-title">{{ p.title }}</h2>
+        <!-- 내용 -->
+        <p class="card-text">
+            {{ p.content | truncatewords:50 }}
+        </p>
+
+        <!-- 버튼이 눌렸을 때 이동할 url과 button을 쉽게 찾기 위한 id를 추가한다. -->
+        <a href="{{ p.get_absolute_url }}" class="btn btn-primary" id="read-more-post-{{ p.pk }}">Read More&rarr;</a>
+    </div>
+    <!-- 작성일과 작성자 -->
+    <div class="card-footer text-muted">
+        Posted on {{ p.created }} by
+        <a href="#">{{ p.author }}</a>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<h3>아직 게시물이 없습니다.</h3>
+{% endif %}
+{% endblock %}

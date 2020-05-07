@@ -1,0 +1,115 @@
+{% extends 'blog/base.html' %}
+<!-- 포스트의 title을 반영한다. -->
+
+{% load crispy_forms_tags %}
+
+{% block title %}{{ object.title }}{% endblock %}
+{% block content %}
+<!-- Title -->
+<h1>{{ object.title }}</h1>
+
+<!-- category를 붙여준다. -->
+{% if object.category %}
+<!-- badge가 오른쪽에 붙을 수 있게 float-right옵션을 이용한다. -->
+<span class="badge badge-primary float-right">{{ object.category }}</span>
+{% else %}
+<span class="badge badge-primary float-right">미분류</span>
+{% endif %}
+
+
+<!-- Author -->
+<p class="lead">
+  by
+  <a href="#">{{ object.author.username }}</a>
+</p>
+<!-- 로그인 한 사용자가 author와 같으면 EDIT 버튼을 보여준다.-->
+{% if request.user == object.author %}
+<button type="button" class="btn btn-sm btn-secondary float-right"
+  onclick="location.href='{{ object.get_update_url }}'">EDIT</button>
+{% endif %}
+
+<hr>
+
+<!-- Date/Time -->
+<p>Posted on {{ object.created }}</p>
+
+<hr>
+
+<!-- Preview Image -->
+{% if object.head_image %}
+<img class="img-fluid rounded" src="{{object.head_image.url}}" alt="{{ object.title }}">
+{% endif %}
+
+<hr>
+
+<!-- Post Content -->
+{#{{ object.content }}#}
+<!--safe 옵션을 줘야 바뀐 html 코드를 바로 적용할 수 있다 -->
+{{ object.get_markdwon_content | safe }}
+<hr>
+
+<!-- Comments Form -->
+<div class="card my-4">
+  <h5 class="card-header">Leave a Comment:</h5>
+  <div class="card-body">
+    <form method="post" action="{{ object.get_absolute_url }}new_comment/">{% csrf_token %}
+      <div class="form-group">
+          {{ comment_form | crispy }}
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Comment -->
+<div id="comment-list">
+{% for comment in object.comment_set.all %}
+  <div class="media mb-4" id="comment-id-{{ comment.pk }}">
+    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+    <div class="media-body">
+        <!-- edit와 delete button-->
+        {% if comment.author == request.user %}
+{#            <button class="btn btn-sm btn-warning float-right">delete</button>#}
+            <button class="glyphicon glyphicon-trash float-right">delete</button>
+            <button class="btn btn-sm btn-info float-right">edit</button>
+        {% endif %}
+      <h5 class="mt-0">{{ comment.author }} <small class="text-muted">{{ comment.created_at }}</small></h5>
+      {{ comment.get_markdwon_content | safe }}
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+<!-- Comment with nested comments -->
+<div class="media mb-4">
+  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+  <div class="media-body">
+    <h5 class="mt-0">Commenter Name</h5>
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+    vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+    congue felis in faucibus.
+
+    <div class="media mt-4">
+      <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+      <div class="media-body">
+        <h5 class="mt-0">Commenter Name</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+        lacinia congue felis in faucibus.
+      </div>
+    </div>
+
+    <div class="media mt-4">
+      <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+      <div class="media-body">
+        <h5 class="mt-0">Commenter Name</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
+        vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
+        lacinia congue felis in faucibus.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
