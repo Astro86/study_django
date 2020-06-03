@@ -69,8 +69,8 @@
 
 - [Comment (댓글) 모델 구현하기](log/implement_comment_model.md)
 - [Comment (댓글) view 구현하기](log/implement_comment_view.md)
-- Comment (댓글) 작성창 구현하기
-- Comment 작성일 추가하기, edit, delete 버튼 만들기
+- [Comment (댓글) 작성창 구현하기](log/implement_comment_window.md)
+- [Comment 작성일 추가하기, edit, delete 버튼 만들기](log/add_category_to_post_list_to_post_detail.md)
 
 ## Social Login
 
