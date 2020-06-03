@@ -10,9 +10,14 @@
 <!-- new post button 만들기 -->
 <button class="btn btn-primary btn-sm float-right" onclick="location.href='/blog/create/'">New Post</button>
 {% endif %}
+
 <h1>Blog {% if category  %} <small class="text-muted">: {{ category }}</small>{% endif %}</h1>
+
+
 <!-- Blog Post -->
 {% if object_list.exists %}
+
+
 <!-- 포스트의 모든 게시물들을 하나씩 가져온다. -->
 {% for p in object_list %}
 <div class="card mb-4">

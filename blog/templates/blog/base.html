@@ -115,7 +115,8 @@
                                 <ul class="list-unstyled mb-0">
                                     {% for category in category_list %}
                                     <li>
-                                        <a href="{{ category.get_absolute_url }}">{{ category.name }}({{ category.post_set.count }})</a>
+                                        <a
+                                            href="{{ category.get_absolute_url }}">{{ category.name }}({{ category.post_set.count }})</a>
                                     </li>
                                     {% endfor %}
                                     <li>
@@ -139,11 +140,6 @@
         </div>
         <!-- /.row -->
     </div>
-
-    <!-- <script src="../_vendor/jquery/dist/jquery.min.js"></script> -->
-    <!-- <script src="../_vendor/popper.js/dist/umd/popper.min.js"></script> -->
-    <!-- <script src="../_vendor/bootstrap/dist/js/bootstrap.min.js"></script> -->
-    <!-- <script src="../_assets/js/custom.js"></script> -->
 
     <script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
     <script src="{% static 'blog/_assets/js/popper.min.js' %}"></script>
